@@ -6,6 +6,7 @@
 
 <div *ngFor="let prop of proposals">
   <h3>{{prop.customer}}</h3>
+  <a routerLink='/proposal/{{prop.id}}'>{{prop.id}} - {{prop.customer}}</a>
   <p>{{prop.tools}}</p>
   <p>Total: {{prop.estimated_hours * prop.hourly_rate}}</p>
 
