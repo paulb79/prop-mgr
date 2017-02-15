@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var core_1 = require("@angular/core");
 var DocumentsComponent = (function () {
     function DocumentsComponent() {
+        this.pageTitle = "Documents Dashboard";
         this.documents = [
             {
                 title: "My First Doc",

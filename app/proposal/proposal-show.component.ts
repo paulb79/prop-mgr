@@ -8,19 +8,21 @@ import { Proposal } from './proposal';
   templateUrl: 'proposal-show.component.html'
 })
 export class ProposalShowComponent implements OnInit {
-  id: number;
+  id: number; // can be accessed in the view using {{ id }}
   routeId: any;
 
   constructor(
+    // uses dependancy injection - on visiting the show page will call constructor
+
     private route: ActivatedRoute
-  ) {
+  ) {}
 
-  }
-
+  // store the ID from the URL when the proposal is displayed
   ngOnInit(): void {
     this.routeId = this.route.params.subscribe(
+      // anon fn
       params => {
-        this.id = +params['id'];
+        this.id = +params['id']; // convert strings to number using the prefix operator +
       }
     )
   }

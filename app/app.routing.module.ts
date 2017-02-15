@@ -11,8 +11,8 @@ const routes: Routes = [
   { path: '' , redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomepageComponent },
   { path: 'documents', component: DocumentsComponent },
-  { path: 'proposal', component: ProposalListComponent },
-  { path: 'proposal/new', component: ProposalNewComponent },
+  { path: 'proposals', component: ProposalListComponent },
+  { path: 'proposals/new', component: ProposalNewComponent },
   { path: 'proposal/:id', component: ProposalShowComponent },
 ]
 

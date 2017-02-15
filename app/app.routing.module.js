@@ -16,8 +16,8 @@ var routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: 'home', component: homepage_component_1.HomepageComponent },
     { path: 'documents', component: documents_component_1.DocumentsComponent },
-    { path: 'proposal', component: proposal_list_component_1.ProposalListComponent },
-    { path: 'proposal/new', component: proposal_new_component_1.ProposalNewComponent },
+    { path: 'proposals', component: proposal_list_component_1.ProposalListComponent },
+    { path: 'proposals/new', component: proposal_new_component_1.ProposalNewComponent },
     { path: 'proposal/:id', component: proposal_show_component_1.ProposalShowComponent },
 ];
 var AppRoutingModule = (function () {

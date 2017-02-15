@@ -11,13 +11,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var ProposalShowComponent = (function () {
-    function ProposalShowComponent(route) {
+    function ProposalShowComponent(
+        // uses dependancy injection - on visiting the show page will call constructor
+        route) {
         this.route = route;
     }
+    // store the ID from the URL when the proposal is displayed
     ProposalShowComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.routeId = this.route.params.subscribe(function (params) {
-            _this.id = +params['id'];
+        this.routeId = this.route.params.subscribe(
+        // anon fn
+        function (params) {
+            _this.id = +params['id']; // convert strings to number using the prefix operator +
         });
     };
     return ProposalShowComponent;
