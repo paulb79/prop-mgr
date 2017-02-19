@@ -1,16 +1,35 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs/Rx';
 import { Proposal } from './proposal';
+import { ProposalService } from './proposal.service';
 
 @Component({
   moduleId: module.id,
   selector: 'proposal-list',
-  templateUrl: 'proposal-list.component.html'
+  templateUrl: 'proposal-list.component.html',
+  providers: [ ProposalService ]
 })
 
 export class ProposalListComponent {
-  proposal1: Proposal = new Proposal(1, 'Macdonalds', 'http://www.macdonalds.com', 'Ruby on Rails', 120, 75, 19, 'me@mcdonalds.com');
-  proposal2: Proposal = new Proposal(2, 'Nike', 'http://www.nike.com', 'NodeJS', 10, 75, 19, 'me@nike.com');
-  proposal3: Proposal = new Proposal(3, 'Volvo', 'http://www.volvo.com', 'Ruby on Rails', 20, 75, 19, 'me@volvo.com');
+  proposals: Proposal[];
+  errorMessage: string;
+  mode = "Observable";
 
-  proposals: Proposal[] = [this.proposal1, this.proposal2, this.proposal3];
+  constructor(
+    private proposalService: ProposalService
+  ) {}
+
+  ngOnInit() {
+    let timer = Observable.timer(0, 5000);
+    timer.subscribe(() => this.getProposals());
+  }
+
+  getProposals() {
+    this.proposalService.getProposals()
+        .subscribe(
+          proposals => this.proposals = proposals,
+          error => this.errorMessage = <any>error
+        );
+  }
+
 }

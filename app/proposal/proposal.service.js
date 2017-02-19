@@ -11,17 +11,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
 var Rx_1 = require("rxjs/Rx");
-var DocumentService = (function () {
-    function DocumentService(http) {
+var ProposalService = (function () {
+    function ProposalService(http) {
         this.http = http;
-        this.documentsUrl = 'http://192.168.1.140:3002/freelance_docs.json';
+        this.proposalsUrl = 'http://192.168.1.140:3003/proposals.json';
     }
-    DocumentService.prototype.getDocuments = function () {
-        return this.http.get(this.documentsUrl)
+    ProposalService.prototype.getProposals = function () {
+        return this.http.get(this.proposalsUrl)
             .map(function (response) { return response.json(); })
             .catch(this.handleError);
     };
-    DocumentService.prototype.handleError = function (error) {
+    ProposalService.prototype.handleError = function (error) {
         var errMsg;
         if (error instanceof http_1.Response) {
             var body = error.json() || '';
@@ -34,11 +34,11 @@ var DocumentService = (function () {
         console.error(errMsg);
         return Rx_1.Observable.throw(errMsg);
     };
-    return DocumentService;
+    return ProposalService;
 }());
-DocumentService = __decorate([
+ProposalService = __decorate([
     core_1.Injectable(),
     __metadata("design:paramtypes", [http_1.Http])
-], DocumentService);
-exports.DocumentService = DocumentService;
-//# sourceMappingURL=document.service.js.map
+], ProposalService);
+exports.ProposalService = ProposalService;
+//# sourceMappingURL=proposal.service.js.map
