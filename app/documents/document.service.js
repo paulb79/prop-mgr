@@ -14,7 +14,7 @@ var Rx_1 = require("rxjs/Rx");
 var DocumentService = (function () {
     function DocumentService(http) {
         this.http = http;
-        this.documentsUrl = 'http://192.168.1.140:3002/freelance_docs.json';
+        this.documentsUrl = 'http://localhost:3002/freelance_docs.json';
     }
     DocumentService.prototype.getDocuments = function () {
         return this.http.get(this.documentsUrl)
