@@ -1,7 +1,7 @@
 <h1>New Proposal</h1>
 
 <div class="">
-  <form #proposalForm="ngForm">
+  <form (ngSubmit)="createProposal(proposal)" #proposalForm="ngForm">
     <div class="form-group">
       <label for="customer">Customer Name</label>
       <input type="text"
@@ -83,6 +83,12 @@
               #weeks_to_complete='ngModel'
               [(ngModel)]="proposal.weeks_to_complete">
     </div>
+
+    <button type="submit" name="button" class="btn btn-outline-info btn-lg"
+      [disabled]="!proposalForm.form.valid"
+      [hidden]="submitted">
+      Generate Proposal
+    </button>
   </form>
 </div>
 
