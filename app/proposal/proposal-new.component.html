@@ -89,6 +89,10 @@
       [hidden]="submitted">
       Generate Proposal
     </button>
+
+    <div [hidden]="!submitted" class="alert alert-success" role="alert">
+      Your proposal has been generated <a href="#" class="alert-link" routerLink="/proposals">View all proposals</a>
+    </div>
   </form>
 </div>
 
