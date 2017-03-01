@@ -10,7 +10,7 @@ import { ProposalService } from './proposal.service';
   providers: [ ProposalService ]
 })
 
-export class ProposalListComponent {
+export class ProposalListComponent implements OnInit {
   proposals: Proposal[];
   errorMessage: string;
   mode = "Observable";
