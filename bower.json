@@ -1,0 +1,20 @@
+{
+  "name": "freelance-camp-fe",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Paul Brown <paul@redjamjar.net>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/paulb79/prop-mgr",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.6"
+  }
+}
