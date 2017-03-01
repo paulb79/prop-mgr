@@ -1,3 +1,10 @@
-<h1>Proposals</h1>
+<div class="container">
+  <div *ngIf="proposal" class="card proposal-card">
+    <h1>{{ proposal.customer }}</h1>
 
-<p>The id for proposal {{this.id}}</p>
+    <div class="">
+      <p>{{ proposal }}</p>
+    </div>
+  </div>
+
+</div>

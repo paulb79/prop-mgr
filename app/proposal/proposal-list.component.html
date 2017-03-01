@@ -1,9 +1,17 @@
-<h1>Proposal List</h1>
+<div class="container">
+  <div class="list-group">
+    <a class="list-group-item list-group-item-action active" >
+      <h1 class="headline">Proposal List</h1>
+    </a>
 
-<div *ngFor="let prop of proposals">
-  <h3>{{prop.customer}}</h3>
-  <a routerLink='/proposal/{{prop.id}}'>{{prop.id}} - {{prop.customer}}</a>
-  <p>{{prop.tools}}</p>
-  <p>Total: {{prop.estimated_hours * prop.hourly_rate}}</p>
+    <span *ngFor="let prop of proposals" class="list-group-item list-group-item-action">
+      <a (click)="goToShow(prop)" class="proposal-link">
+        <h5>{{prop.customer}}</h5>
 
+        <p class="list-group-item-text">
+          Total: {{ prop.estimated_hours * prop.hourly_rate | currency:'GBP':true:'.0' }}
+        </p>
+      </a>
+    </span>
+  </div>
 </div>
