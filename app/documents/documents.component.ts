@@ -8,7 +8,7 @@ import { DocumentService } from './document.service';
   selector: 'documents',
   templateUrl: 'documents.component.html',
   styleUrls: ['documents.component.css'],
-  providers: [ DocumentService ],
+  providers: [ DocumentService ], // each instance of the component gets its only instance of the documentService.
 })
 export class DocumentsComponent implements OnInit {
   pageTitle: string = "Documents Dashboard";

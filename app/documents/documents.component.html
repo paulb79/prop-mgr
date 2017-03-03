@@ -2,15 +2,16 @@
 
   <h1>{{ pageTitle }}</h1>
 
-  <div class="card" style="width:20rem;" *ngFor="let doc of documents">
+  <div class="card document-card" style="width:40rem;" *ngFor="let doc of documents">
     <div class="card-block">
       <img class="card-img-top" src="/images/freelancer.png" alt="Freelancer" style="width: 100%">
       <h3 class="card-title">{{doc.title}}</h3>
+      <p class="card-text"><small class="text-muted">Last updated {{ doc.updated_at | date }}</small></p>
       <p class="card-text">{{doc.description}}</p>
       <div class="">
         <a class="btn btn-large btn-primary" href="{{ doc.file_url }}">Download File</a>
       </div>
-      <p class="card-text"><small class="text-muted">Last updated {{ doc.updated_at }}</small></p>
+
     </div>
   </div>
 </div>

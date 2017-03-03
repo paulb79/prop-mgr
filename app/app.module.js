@@ -10,6 +10,7 @@ var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms");
 var http_1 = require("@angular/http");
 var ng_bootstrap_1 = require("@ng-bootstrap/ng-bootstrap");
+var ng2_pagination_1 = require("ng2-pagination");
 var app_component_1 = require("./app.component");
 var homepage_component_1 = require("./homepage/homepage.component");
 var documents_component_1 = require("./documents/documents.component");
@@ -29,6 +30,7 @@ AppModule = __decorate([
         imports: [
             platform_browser_1.BrowserModule,
             app_routing_module_1.AppRoutingModule,
+            ng2_pagination_1.Ng2PaginationModule,
             forms_1.FormsModule,
             http_1.HttpModule,
             ng_bootstrap_1.NgbModule.forRoot(),

@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var Rx_1 = require("rxjs/Rx");
@@ -39,6 +40,7 @@ ProposalListComponent = __decorate([
         moduleId: module.id,
         selector: 'proposal-list',
         templateUrl: 'proposal-list.component.html',
+        styleUrls: ['proposal.css'],
         providers: [proposal_service_1.ProposalService]
     }),
     __metadata("design:paramtypes", [proposal_service_1.ProposalService,

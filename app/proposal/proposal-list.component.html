@@ -1,10 +1,10 @@
-<div class="container">
+<div class="container proposal-pn">
   <div class="list-group">
     <a class="list-group-item list-group-item-action active" >
       <h1 class="headline">Proposal List</h1>
     </a>
 
-    <span *ngFor="let prop of proposals" class="list-group-item list-group-item-action">
+    <span *ngFor="let prop of proposals | paginate: { itemsPerPage: 10, currentPage: p }" class="list-group-item list-group-item-action">
       <a (click)="goToShow(prop)" class="proposal-link">
         <h5>{{prop.customer}}</h5>
 
@@ -13,5 +13,6 @@
         </p>
       </a>
     </span>
+    <pagination-controls (pageChange)="p = $event" #api></pagination-controls>
   </div>
 </div>

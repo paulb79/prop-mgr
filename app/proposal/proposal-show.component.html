@@ -3,7 +3,18 @@
     <h1>{{ proposal.customer }}</h1>
 
     <div class="">
-      
+      <p>Hi {{ proposal.customer }}, </p>
+
+      <p>It is a pleasure to meet you, please find example of my work available <a href="{{ proposal.portfolio_url }}">here</a>.</p>
+
+      <p>To accomplish the project and meet the requirements that we discussed I
+        have estimating it will take {{ proposal.estimated_hours }} hours in development to complete.
+        The hourly rate of {{ proposal.hourly_rate }}/hour. The estimated total will be
+        {{ proposal.hourly_rate * proposal.estimated_hours | currency:'GBP':true:'.0' }}</p>
+
+      <p>The nest step from here is to finialise the project and sign contracts</p>
+
+
     </div>
   </div>
 

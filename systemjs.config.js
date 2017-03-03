@@ -27,6 +27,7 @@
       'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
       '@ng-bootstrap/ng-bootstrap': 'node_modules/@ng-bootstrap/ng-bootstrap/bundles/ng-bootstrap.js',
       '@ng-bootstrap/ng-bootstrap': 'node_modules/@ng-bootstrap/ng-bootstrap/bundles/ng-bootstrap.js',
+      'ng2-pagination': 'node_modules/ng2-pagination/dist',
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {
@@ -36,6 +37,9 @@
       },
       rxjs: {
         defaultExtension: 'js'
+      },
+      'ng2-pagination': { 
+        main: 'ng2-pagination.js', defaultExtension: 'js'
       }
     }
   });

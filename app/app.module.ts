@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { Ng2PaginationModule } from 'ng2-pagination';
 
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
@@ -20,6 +21,7 @@ import { AppRoutingModule } from './app.routing.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    Ng2PaginationModule,
     FormsModule,
     HttpModule,
     NgbModule.forRoot(),
@@ -33,7 +35,7 @@ import { AppRoutingModule } from './app.routing.module';
     ProposalShowComponent,
   ],
   providers: [
-    DocumentService,
+    DocumentService, // available everywhere as a singleton
     ProposalService,
   ],
   bootstrap: [

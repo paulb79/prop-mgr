@@ -10,6 +10,7 @@ import { ProposalService } from './proposal.service';
   moduleId: module.id,
   selector: 'proposap-show',
   templateUrl: 'proposal-show.component.html',
+  styleUrls: [ './proposal.css' ],
   providers: [ ProposalService ]
 
 })

@@ -8,6 +8,7 @@ import { ProposalService } from './proposal.service';
   moduleId: module.id,
   selector: 'proposal-list',
   templateUrl: 'proposal-list.component.html',
+  styleUrls: [ 'proposal.css' ],
   providers: [ ProposalService ]
 })
 
