@@ -5,6 +5,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms");
@@ -18,6 +19,7 @@ var document_service_1 = require("./documents/document.service");
 var proposal_list_component_1 = require("./proposal/proposal-list.component");
 var proposal_new_component_1 = require("./proposal/proposal-new.component");
 var proposal_show_component_1 = require("./proposal/proposal-show.component");
+var proposal_search_component_1 = require("./proposal/proposal-search.component");
 var proposal_service_1 = require("./proposal/proposal.service");
 var app_routing_module_1 = require("./app.routing.module");
 var AppModule = (function () {
@@ -42,6 +44,7 @@ AppModule = __decorate([
             proposal_list_component_1.ProposalListComponent,
             proposal_new_component_1.ProposalNewComponent,
             proposal_show_component_1.ProposalShowComponent,
+            proposal_search_component_1.ProposalSearchComponent,
         ],
         providers: [
             document_service_1.DocumentService,

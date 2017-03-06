@@ -8,9 +8,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
 var Rx_1 = require("rxjs/Rx");
+require("rxjs/add/operator/map");
 var ProposalService = (function () {
     function ProposalService(http) {
         this.http = http;
@@ -29,6 +31,12 @@ var ProposalService = (function () {
         var options = new http_1.RequestOptions({ headers: headers });
         return this.http.post(this.proposalsUrl, JSON.stringify(proposal), { headers: headers })
             .map(function (res) { return res.json(); });
+    };
+    ProposalService.prototype.search = function (term) {
+        return this.http
+            .get(this.proposalsUrl + "/?name=" + term)
+            .map(function (response) { return response.json(); })
+            .catch(this.handleError);
     };
     ProposalService.prototype.handleError = function (error) {
         var errMsg;

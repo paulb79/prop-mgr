@@ -12,6 +12,7 @@ import { DocumentService } from './documents/document.service';
 import { ProposalListComponent } from './proposal/proposal-list.component';
 import { ProposalNewComponent } from './proposal/proposal-new.component';
 import { ProposalShowComponent } from './proposal/proposal-show.component';
+import { ProposalSearchComponent } from './proposal/proposal-search.component';
 import { ProposalService } from './proposal/proposal.service';
 
 
@@ -33,6 +34,7 @@ import { AppRoutingModule } from './app.routing.module';
     ProposalListComponent,
     ProposalNewComponent,
     ProposalShowComponent,
+    ProposalSearchComponent,
   ],
   providers: [
     DocumentService, // available everywhere as a singleton

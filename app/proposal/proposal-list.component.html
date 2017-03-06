@@ -4,6 +4,8 @@
       <h1 class="headline">Proposal List</h1>
     </a>
 
+    <proposal-search></proposal-search>
+
     <span *ngFor="let prop of proposals | paginate: { itemsPerPage: 10, currentPage: p }" class="list-group-item list-group-item-action">
       <a (click)="goToShow(prop)" class="proposal-link">
         <h5>{{prop.customer}}</h5>

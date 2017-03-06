@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
+import 'rxjs/add/operator/map';
 
 import { Proposal } from './proposal';
 
@@ -27,6 +28,13 @@ export class ProposalService {
     let options = new RequestOptions({headers: headers})
     return this.http.post(this.proposalsUrl, JSON.stringify(proposal), { headers: headers })
                   .map((res: Response) => res.json());
+  }
+
+  search(term: string): Observable<Proposal[]> {
+    return this.http
+              .get(this.proposalsUrl + "/?name=" + term)
+              .map((response: Response) => <Proposal[]>response.json())
+              .catch(this.handleError);
   }
 
   private handleError(error: Response | any) {
