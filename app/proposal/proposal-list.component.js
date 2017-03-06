@@ -29,6 +29,7 @@ var ProposalListComponent = (function () {
         this.proposalService.getProposals()
             .subscribe(function (proposals) { return _this.proposals = proposals; }, function (error) { return _this.errorMessage = error; });
     };
+    // allow the view to navigate to the proposal view
     ProposalListComponent.prototype.goToShow = function (proposal) {
         var link = ['/proposal', proposal.id];
         this.router.navigate(link);

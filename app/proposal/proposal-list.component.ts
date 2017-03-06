@@ -35,6 +35,7 @@ export class ProposalListComponent implements OnInit {
         );
   }
 
+  // allow the view to navigate to the proposal view
   goToShow(proposal: Proposal): void {
     let link = ['/proposal', proposal.id];
     this.router.navigate(link);
