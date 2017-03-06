@@ -33,6 +33,7 @@ ProposalNewComponent = __decorate([
         moduleId: module.id,
         selector: 'proposal-new',
         templateUrl: 'proposal-new.component.html',
+        styleUrls: ['proposal.css'],
         providers: [proposal_service_1.ProposalService]
     }),
     __metadata("design:paramtypes", [proposal_service_1.ProposalService])

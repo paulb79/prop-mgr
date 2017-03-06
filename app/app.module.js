@@ -18,6 +18,7 @@ var document_service_1 = require("./documents/document.service");
 var proposal_list_component_1 = require("./proposal/proposal-list.component");
 var proposal_new_component_1 = require("./proposal/proposal-new.component");
 var proposal_show_component_1 = require("./proposal/proposal-show.component");
+var proposal_search_component_1 = require("./proposal/proposal-search.component");
 var proposal_service_1 = require("./proposal/proposal.service");
 var app_routing_module_1 = require("./app.routing.module");
 var AppModule = (function () {
@@ -42,6 +43,7 @@ AppModule = __decorate([
             proposal_list_component_1.ProposalListComponent,
             proposal_new_component_1.ProposalNewComponent,
             proposal_show_component_1.ProposalShowComponent,
+            proposal_search_component_1.ProposalSearchComponent,
         ],
         providers: [
             document_service_1.DocumentService,

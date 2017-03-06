@@ -1,0 +1,11 @@
+<div id="search-component">
+  <div class="input-group">
+    <span class="input-group-addon">Find:</span>
+    <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
+  </div>
+  <div>
+    <div *ngFor="let prop of proposals | async" class="search-result" >
+      <a (click)="goToShow(prop)" class="proposal-link">{{prop.customer}}</a>
+    </div>
+  </div>
+</div>
